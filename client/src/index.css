@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --color-dark-bg: #0f0f11;
+  --color-dark-card: #18181b;
+  --color-dark-border: #27272a;
+  --color-brand-accent: #7c3aed;
+}
+
+/* Custom Scrollbar for Luxury Dark Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f11;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Prevent layout breaking for columns */
+.break-inside-avoid {
+  break-inside: avoid;
+}
+
+body {
+  background-color: #0f0f11;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom keyframes for slow collage scrolling */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scrollUp 40s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scrollDown 40s linear infinite;
+}
